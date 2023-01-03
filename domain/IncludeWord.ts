@@ -8,15 +8,15 @@ export function solution(t : type['t'], p : type['p']) : number{
     let index : number = 0;
     let tempStr : String = '';
     for(let i =0; i < t.length; i++){
-        tempStr += t[i];
+        tempStr = tempStr + t[i];
         if(tempStr.length === p.length){
             
-            if(+tempStr < +p){
+            if(+tempStr <= +p){
                 answer ++;
-                i = index;
-                index++;
-                tempStr = '';
             }
+            tempStr = '';
+            i = index;
+            index++;
         }       
 
     }
